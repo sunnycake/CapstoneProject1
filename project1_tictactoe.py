@@ -83,10 +83,9 @@ def human_move(board):
         move = input()
     return int(move)
 
-# Duplication board for the computer to evaluate and execute its moves.
-
 
 def dup_board(board):
+    # Duplication board for the computer to evaluate and execute its moves.
     board_copy = []
     for i in board:
         board_copy.append(i)
@@ -94,9 +93,8 @@ def dup_board(board):
 
 
 def computer_move(board):
-
+    # Find winning move and move there.
     for i in range(1, 10):
-        # Find winning move and move there.
         board_copy = dup_board(board)
         if space_available(board_copy, i):
             place_move(board_copy, computer_letter, i)
